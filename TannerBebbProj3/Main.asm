@@ -26,6 +26,23 @@ ExitProcess proto, dwExitCode:dword
 	warray BYTE Sun, Mon, Tue, Wed, Thu, Fri, Sat
 ;End 2.)
 
+;Start 3.)
+
+	var1 BYTE 9h
+	var2 SBYTE -20
+	var3 WORD 800
+	var4 SWORD -1600
+	var5 DWORD 12345678h
+	var6 SDWORD -12345678h
+	var7 FWORD 0
+	var8 QWORD 1234567887654321h
+	var9 TBYTE 1000000000123456789h
+	var10 REAL4 -3.14
+	var11 REAL8 -3.1E+100
+	;var12 REAL10 -6-5E+2342
+
+;End 3.)
+
 .code
 
 main proc
