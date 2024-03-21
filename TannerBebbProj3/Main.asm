@@ -1,5 +1,6 @@
 ;Tanner Bebb ASM project 3
 ;First MASM program
+;Initial setup test
 
 .386
 .model flat,stdcall
