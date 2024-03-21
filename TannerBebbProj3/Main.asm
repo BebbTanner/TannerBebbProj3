@@ -16,8 +16,12 @@ ExitProcess proto, dwExitCode:dword
 
 main proc 
 	mov eax, 5											;eax = 5
-	mov ebx, 6											;ebx = 6
-	call WriteInt										;Writes the value stored in the eax register to the screen.
+	mov ebx, 5											;ebx = 5
+	add eax, ebx										;(A + B)
+
+	mov ecx, 3											;ecx = 3
+	mov edx, 2											;edx = 2
+	add ecx, edx										;(C + D)
 
 	INVOKE ExitProcess, 0
 
