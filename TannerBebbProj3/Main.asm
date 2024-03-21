@@ -2,6 +2,8 @@
 ;First MASM program
 ;Initial setup test
 
+;1.)X = (A + B) - (C + D)
+
 .386
 .model flat,stdcall
 .stack 4096
@@ -14,7 +16,7 @@ ExitProcess proto, dwExitCode:dword
 
 main proc 
 	mov eax, 5											;eax = 5
-	add eax, 6											;eax = 11
+	mov ebx, 6											;ebx = 6
 	call WriteInt										;Writes the value stored in the eax register to the screen.
 
 	INVOKE ExitProcess, 0
