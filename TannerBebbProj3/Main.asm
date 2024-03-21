@@ -2,7 +2,8 @@
 ;First MASM program
 ;Initial setup test
 
-;1.)X = (A + B) - (C + D)
+;1.) X = (A + B) - (C + D)
+;2.) Write code that defines symbolic constants for all seven days of the week. Create an array variable that uses the symbols as initializers
 
 .386
 .model flat,stdcall
@@ -11,6 +12,18 @@ include irvine32.inc
 ExitProcess proto, dwExitCode:dword
 
 .data
+
+;Start 2.)
+	Sun = 0
+	Mon = 1
+	Tue = 2
+	Wed = 3
+	Thu = 4
+	Fri = 5
+	Sat = 6
+
+	warray BYTE Sun, Mon, Tue, Wed, Thu, Fri, Sat
+;End 2.)
 
 .code
 
@@ -26,10 +39,7 @@ main proc
 	add ecx, edx										;(C + D)
 
 	sub eax, ecx										;(A + B) - (C + D)
-	call WriteInt										;Used this to be sure that I was getting the right result.
 ;End 1.)
-
-	
 
 	INVOKE ExitProcess, 0
 
