@@ -14,7 +14,9 @@ ExitProcess proto, dwExitCode:dword
 
 .code
 
-main proc 
+main proc
+
+;Start 1.)
 	mov eax, 5											;eax = 5
 	mov ebx, 5											;ebx = 5
 	add eax, ebx										;(A + B)
@@ -22,6 +24,12 @@ main proc
 	mov ecx, 3											;ecx = 3
 	mov edx, 2											;edx = 2
 	add ecx, edx										;(C + D)
+
+	sub eax, ecx										;(A + B) - (C + D)
+	call WriteInt										;Used this to be sure that I was getting the right result.
+;End 1.)
+
+	
 
 	INVOKE ExitProcess, 0
 
