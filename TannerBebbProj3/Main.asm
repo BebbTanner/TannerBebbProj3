@@ -15,6 +15,11 @@ ExitProcess proto, dwExitCode:dword
 
 .data
 
+;Start 4.)
+	myMessage EQU 'Hello, World!'
+	var 1 BYTE myMessage
+;End 4.)
+
 ;Start 2.)
 	Sun = 0
 	Mon = 1
